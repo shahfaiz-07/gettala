@@ -267,7 +267,7 @@ li {
     transform: translateY(-20%) scale(0.9);
     height: 20rem;
     width: 16rem;
-    z-index: -1;
+    z-index: 0;
     border-radius: .7rem;
     transition: all 1s ease-out;
     opacity: 0;
@@ -302,7 +302,7 @@ li {
 }
 
 .p3-list-item {
-    position: inherit;
+    position: relative;
     z-index: 1;
     letter-spacing: -.5rem;
     line-height: 1.5;
@@ -312,7 +312,7 @@ li {
 
 .p3-list-item:hover {
     cursor: pointer;
-    color:transparent;
+    color:#232025;
     -webkit-text-stroke: 1px #d1d1d1;
 }
 
