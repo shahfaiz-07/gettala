@@ -1,6 +1,3 @@
-// window.onload = () => {
-//   document.body.style.display = 'initial';
-// }
 //LOCOMOTIVE JS
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +43,6 @@ ScrollTrigger.refresh();
 const navBtn = document.getElementById("nav-caller");
 const navBar = document.querySelector(".nav-bar");
 const fullNav = document.querySelector(".full-nav");
-// const page1Hero = document.querySelector(".page-1-hero img");
 
 let flag = 0;
 navBtn.addEventListener("click", (evt) => {
@@ -56,7 +52,6 @@ navBtn.addEventListener("click", (evt) => {
       duration: 2,
       ease: Expo.easeOut,
     });
-    // fullNav.style.transform = "translateY(0)";
     navBar.style.color = "#2b2b2b";
     evt.target.setAttribute("class", "ri-close-large-line");
     flag = 1;
@@ -66,7 +61,6 @@ navBtn.addEventListener("click", (evt) => {
       duration: 2,
       ease: Expo.easeOut,
     });
-    // fullNav.style.transform = "translateY(-100%)";
     navBar.style.color = "#cecece";
     evt.target.setAttribute("class", "ri-menu-3-line");
     flag = 0;
@@ -83,13 +77,10 @@ gsap.from(".p1", {
 
 gsap.to(".page-2-hero img", {
   scale: 1.2,
-  // ease: Expo.easeIn,
   scrollTrigger: {
     trigger: ".page-2-hero img",
     scrub: 3,
-    //   markers: true,
     start: "top 30%",
-    //   end:"top 30%",
     scroller: ".main",
   },
 });
@@ -98,13 +89,11 @@ gsap.from(".page-2-content .page-2-lines", {
   rotationX: -90,
   y: "20",
   opacity: 0,
-  //   duration : 2,
   ease: Expo.easeOut,
   transformOrigin: "50% 100%",
   scrollTrigger: {
     trigger: ".page-2-content .page-2-lines",
     scrub: 1,
-    // markers: true,
     start: "top 60%",
     end: "top 10%",
     scroller: ".main",
@@ -116,9 +105,6 @@ gsap.to(".p3-underline", {
   scrollTrigger: {
     trigger: ".p3-underline",
     scrub: 4,
-    // markers: true,
-    // start: "top 60%",
-    // end: "top 50%",
     scroller: ".main",
   },
 });
@@ -127,7 +113,6 @@ gsap.from(".p5-content img", {
   rotateZ: -360,
   duration: 2,
   repeat: -1,
-  // delay: 0,
   ease: "none",
 });
 
@@ -137,40 +122,21 @@ gsap.set(".p6-sliders-even", {
 
 gsap.to(".p6-sliders-odd", {
   x: "-50%",
-  // duration: 2,
   scrollTrigger: {
     trigger: "#page-6",
     scroller: ".main",
     scrub: 2,
-    // start: "top center",
-    // end: "bottom center",
-    // markers: true,
   },
 });
 
 gsap.to(".p6-sliders-even", {
   x: "0%",
-  // duration: 2,
   scrollTrigger: {
     trigger: "#page-6",
     scroller: ".main",
     scrub: 2,
-    // start: "top center",
-    // end: "bottom center",
-    // markers: true,
   },
 });
-
-// gsap.from("#page-3", {
-//   y: "50%",
-//   opacity: 0,
-//   scrollTrigger: {
-//     trigger: "#page-3",
-//     scoller: ".main",
-//     scrub: 3,
-//     markers: true,
-//   },
-// });
 
 const elems = gsap.utils.toArray(".prakat");
 elems.forEach((box) => {
@@ -180,7 +146,6 @@ elems.forEach((box) => {
     scrollTrigger: {
       trigger: box,
       scroller: ".main",
-      // markers: true,
       start: "top 100%",
       end: "top 100%",
       scrub: 4,
@@ -195,8 +160,6 @@ let yesImg = document.querySelector("#yes-img");
 yesDiv.addEventListener("mousemove", (evt) => {
     yesImg.style.opacity = 1;
   yesImg.style.left = `${evt.x}px`;
-  
-    // console.log(evt.movementX);
     yesImg.style.top = `${evt.y}px`;
     yesImg.style.transform = `translate(-50%, -50%) rotate(15deg)`;
   });
@@ -212,7 +175,6 @@ document
   .addEventListener("mousemove", (evt) => {
     noImg.style.opacity = 1;
     noImg.style.left = `${evt.x}px`;
-    // console.log(evt.x);
     noImg.style.top = `${evt.y}px`;
     noImg.style.transform = `translate(-50%, -50%) rotate(15deg)`;
   });
